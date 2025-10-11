@@ -1,0 +1,115 @@
+/* 🌸 Fondo general con imagen suave */
+.background {
+    background-image: url('sara47.jpeg'); /* Cambia el nombre si tu imagen tiene otro */
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 240, 245, 0.4); /* velo rosadito */
+    backdrop-filter: blur(2px);
+}
+
+/* 💗 Estilo general del body */
+body {
+    font-family: 'Times New Roman', serif;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 💕 Cuadros de dedicatoria */
+.dedicatoria, .dedicatoria2, .dedicatoria3, .dedicatoria4 {
+    background-color: rgba(255, 240, 245, 0.9); /* rosadito translúcido */
+    border: 3px solid #fd3582; /* borde decorativo */
+    border-radius: 20px;
+    padding: 25px;
+    margin: 40px auto;
+    max-width: 800px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    text-align: justify;
+}
+
+/* 💌 Título principal */
+.marco-titulo {
+    background-color: #ffe6f0;
+    border: 4px dashed #d63384;
+    border-radius: 20px;
+    padding: 20px 30px;
+    text-align: center;
+    max-width: 90%;
+    margin: 40px auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.marco-titulo h1 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 40px;
+    color: #d63384;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+    margin: 0;
+}
+
+/* 💝 Subtítulo */
+.titulo-dedicatoria {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    color: #d63384;
+    margin-bottom: 20px;
+}
+
+/* ✨ Texto */
+p {
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+/* 🖼️ Imágenes en fila */
+.contenedor-imagenes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre imágenes */
+    margin-top: 20px;
+}
+
+.contenedor-imagenes img {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contenedor-imagenes img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(253, 53, 130, 0.3);
+}
+
+/* 🌼 Enlaces decorativos */
+a {
+    color: #d63384;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff4fa6;
+}
