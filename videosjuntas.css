@@ -1,0 +1,90 @@
+/* Fondo con collage de imágenes */
+.background-mosaico {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    url('sara14.jpeg'),
+    url('sara20.jpeg'),
+    url('sara47.jpeg');
+  background-repeat: repeat;
+  background-size: 300px auto; 
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* Estilo general */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #d9ebff;
+  color: #00264d;
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #003366;
+  text-shadow: 2px 2px 5px white;
+}
+
+/* Contenedor de videos con 3 columnas fijas */
+.videos-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+  gap: 30px;
+  padding: 40px;
+}
+
+/* Tarjetas de video */
+.video-card {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+  text-align: justify;
+  transition: transform 0.3s ease;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.video-card:hover {
+  transform: scale(1.03);
+}
+
+video {
+  width: 100%;
+  height: auto; /* Mantiene proporción */
+  border-radius: 10px;
+}
+
+h2 {
+  margin: 10px 0 5px;
+  color: #004080;
+}
+
+p {
+  font-size: 0.95em;
+  color: #333;
+}
+
+/* Adaptación responsive para pantallas pequeñas */
+@media (max-width: 1000px) {
+  .videos-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .videos-container {
+    grid-template-columns: 1fr;
+  }
+}

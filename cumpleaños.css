@@ -1,0 +1,171 @@
+/* Fondo con la foto de ella difuminada */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #df1212;
+  overflow-x: hidden;
+}
+
+.background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url('sara20.jpeg'); /* ← cambia por su foto */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  filter: blur(4px);
+  z-index: -1;
+}
+
+/* Sección del mensaje */
+.mensaje {
+  text-align: justify;
+  margin: 60px auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.mensaje h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.8em;
+  color: #ffb6c1;
+  text-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
+  margin-bottom: 25px;
+}
+
+/* Cuadro de mensaje */
+.mensaje-card {
+  background: rgba(255, 255, 255, 0.15);
+  border: 8px solid rgba(103, 105, 219, 0.25);
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mensaje-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
+}
+
+/* Texto editable */
+.mensaje-card p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2em;
+  color: #000000;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
+  outline: none;
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(3px);
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5em;
+  color: #ffcae0;
+  text-shadow: 0 0 10px #ffb3c6;
+  margin-bottom: 10px;
+  animation: fadeIn 2s ease;
+}
+
+.sub {
+  font-size: 1.1em;
+  color: #131212;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Galería de fotos */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+/* Tarjetas */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: scale(0.97);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: 380px;              /* 🔥 altura fija para todas las tarjetas */
+  display: flex;
+  align-items: flex-end;      /* el texto siempre abajo */
+  justify-content: center;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(255,192,203,0.4);
+}
+
+/* Imagen dentro de la tarjeta */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* 🔥 se recorta sin deformar */
+  filter: brightness(0.9);
+}
+
+/* Texto centrado abajo */
+.overlay {
+  position: absolute;
+  bottom: 25px;               /* 🔥 un poco más arriba del borde */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;                 /* 🔥 centrado con márgenes laterales */
+  padding: 14px 20px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 12px;
+  text-align: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.overlay p {
+  font-family: 'Times New Roman', Times, serif, cursive;
+  font-size: 1.4em;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Algunas tarjetas más grandes para variedad */
+.card.big {
+  grid-column: span 2;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #f7cfe6;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* Animación inicial */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
