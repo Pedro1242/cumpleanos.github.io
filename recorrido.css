@@ -1,162 +1,147 @@
-/* Fondo con foto difuminada como en el HTML de cumpleaños */
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-  overflow-x: hidden;
-  position: relative;
-}
-
-/* 🔥 Fondo difuminado con la foto */
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('sara23.jpeg'); /* cambia por tu imagen */
-  background-size: cover;
-  background-position: center;
-  opacity: 0.6; /* transparencia suave */
-  filter: blur(5px); /* efecto difuminado */
-  z-index: -1;
-}
-
-/* 🩷 Marco del título principal */
 .marco-recorrido {
-  background-color: rgba(255, 250, 250, 0.9);
-  border: 4px dashed #d6b833;
-  border-radius: 20px;
-  padding: 20px 30px;
-  text-align: center;
-  max-width: 90%;
-  margin: 40px auto;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #faf7f7; /* fondo rosado suave */
+    border: 4px dashed #d6b833; /* marco tipo cinta */
+    border-radius: 20px;
+    padding: 20px 30px;
+    text-align: center;
+    max-width: 90%;
+    margin: 40px auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* sombra */
 }
 
 .marco-recorrido h1 {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  font-size: 40px;
-  color: #000;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
-  margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 40px;
+    color: #000000;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+    margin: 0;
 }
-
-/* 🌷 Secciones del recorrido */
+body {
+    background-color: #fffaf0; /* fondo champán claro */
+}
 .recorrido1 {
-  background: rgba(255, 255, 255, 0.6); /* translúcido para dejar ver el fondo */
-  border: 2px dashed #d4af37;
-  border-radius: 20px;
-  padding: 30px;
-  margin: 50px auto;
-  max-width: 800px;
-  box-shadow: 0 8px 16px rgba(212, 175, 55, 0.2);
-  font-family: Georgia, serif;
-  color: #333;
-  font-size: 18px;
-  line-height: 1.7;
-  text-align: justify;
-  position: relative;
-  backdrop-filter: blur(6px); /* mejora la legibilidad del texto */
+    background: linear-gradient(to bottom right, #fffaf0, #ffe4e1); /* fondo cálido rosado/champán */
+    border: 2px dashed #d4af37; /* borde dorado decorativo */
+    border-radius: 20px;
+    padding: 30px;
+    margin: 50px auto;
+    max-width: 800px;
+    box-shadow: 0 8px 16px rgba(212, 175, 55, 0.2); /* sombra dorada suave */
+    font-family: Georgia, serif;
+    color: #333; /* texto negro suave */
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: justify;
+    position: relative;
 }
 
+/* Opcional: corazón decorativo */
 .recorrido1::before {
-  content: "💗";
-  font-size: 32px;
-  position: absolute;
-  top: -20px;
-  left: 20px;
+    content: "💗";
+    font-size: 32px;
+    position: absolute;
+    top: -20px;
+    left: 20px;
 }
-
 .recorrido1::after {
-  content: "💗";
-  font-size: 32px;
-  position: absolute;
-  bottom: -20px;
-  right: 20px;
+    content: "💗";
+    font-size: 32px;
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+}
+ .contenedor-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* SIEMPRE 3 columnas */
+    gap: 40px;
+    padding: 50px;
+    background-color: #fffaf0;
+    
 }
 
-/* 🖼 Galería */
-.contenedor-galeria {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  padding: 50px;
-}
-
-/* Tarjetas */
+/* Estilo de tarjeta */
 .tarjeta {
-  background: rgba(255, 255, 255, 0.7);
-  border: 2px solid #d4af37;
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(212, 175, 55, 0.2);
-  padding: 20px;
-  transition: transform 0.3s ease;
-  text-align: justify;
-  backdrop-filter: blur(4px);
+    background: linear-gradient(to bottom right, #fffaf0, #ffe4e1);
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(212, 175, 55, 0.2);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    text-align: justify;
+}
+
+/* Imagen con tamaño fijo */
+.tarjeta img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Texto bonito */
+.tarjeta p {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
 }
 
 .tarjeta:hover {
-  transform: scale(1.03);
+    transform: scale(1.03);
 }
-
-.tarjeta img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-/* Texto dentro de la tarjeta */
-.tarjeta p {
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  font-size: 16px;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* 💬 Mensajes finales */
-.mensaje-final, .mensaje-final2 {
-  position: relative;
-  max-width: 700px;
-  margin: 60px auto 80px auto;
-  padding: 40px 50px;
-  border-radius: 25px;
-  color: #000;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 22px;
-  text-align: center;
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  animation: floatUp 4s ease-in-out infinite alternate;
-}
-
 .mensaje-final {
-  background: url('sara15.jpeg') center center/cover no-repeat;
-}
-
-.mensaje-final2 {
-  background: url('sara46.jpeg') center center/cover no-repeat;
+    position: relative;
+    max-width: 700px;
+    margin: 60px auto 80px auto;
+    padding: 40px 50px;
+    border-radius: 25px;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: url('sara15.jpeg') center center/cover no-repeat;
+    animation: floatUp 4s ease-in-out infinite alternate;
 }
 
 .mensaje-final p {
-  text-shadow: 2px 2px 8px rgba(158, 143, 6, 0.6);
+    text-shadow: 2px 2px 8px rgba(158, 143, 6, 0.6);
+}
+.mensaje-final2 {
+    position: relative;
+    max-width: 700px;
+    margin: 60px auto 80px auto;
+    padding: 40px 50px;
+    border-radius: 25px;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: url('sara46.jpeg') center center/cover no-repeat;
+    animation: floatUp 4s ease-in-out infinite alternate;
 }
 
 .mensaje-final2 p {
-  text-shadow: 2px 2px 8px rgba(104, 5, 124, 0.6);
+    text-shadow: 2px 2px 8px rgba(104, 5, 124, 0.6);
 }
 
-/* Animación flotante */
 @keyframes floatUp {
-  0% {
-    transform: translateY(0);
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-  }
-  100% {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(31, 38, 135, 0.5);
-  }
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    }
+    100% {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px 0 rgba(31, 38, 135, 0.5);
+    }
 }
+
+
